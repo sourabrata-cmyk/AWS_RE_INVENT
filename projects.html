@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="animated-bg" id="particleCanvas"></div>
     <nav>
         <div class="nav-container">
             <div class="logo">Sourabrata Samanta</div>
@@ -20,6 +21,8 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="blog.html">Work</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -139,24 +142,48 @@
 
     <style>
         :root {
-            --accent-purple: #7c3aed; /* new purple accent (replaces pink accents) */
+            --accent-teal: #0891b2;
         }
 
         .projects-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
             color: white;
-            padding: 100px 0;
+            padding: 100px 0 50px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projects-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .projects-hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
         }
 
         .projects-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            position: relative;
+            z-index: 1;
         }
 
         .projects-content {
@@ -173,6 +200,18 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             overflow: hidden;
+        }
+
+        .project-card-detailed:nth-child(1) {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .project-card-detailed:nth-child(2) {
+            background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+        }
+
+        .project-card-detailed:nth-child(3) {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
         }
 
         .project-info {
@@ -215,9 +254,9 @@
             gap: 1rem;
         }
 
-        /* Replace button/promo accents with purple */
+        /* Replace button/promo accents with teal */
         .project-links .btn.btn-primary {
-            background: var(--accent-purple);
+            background: var(--accent-teal);
             color: #fff;
             border: none;
             border-radius: 6px;
@@ -225,8 +264,8 @@
 
         .project-links .btn.btn-secondary {
             background: transparent;
-            color: var(--accent-purple);
-            border: 1px solid var(--accent-purple);
+            color: var(--accent-teal);
+            border: 1px solid var(--accent-teal);
             border-radius: 6px;
         }
 
@@ -248,6 +287,24 @@
             navMenu.classList.toggle('active');
             toggle.classList.toggle('active');
         }
+
+        function createParticles() {
+            const container = document.getElementById('particleCanvas');
+            const particleCount = 15;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 60 + 20;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
     </script>
 </body>
 </html>

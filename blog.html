@@ -31,8 +31,20 @@
     /* ensure work items align nicely */
     .work-item {
       align-items: center;
-      background: #fbfbff; /* light card background */
+      background: #ffffff;
       transition: box-shadow 180ms ease, transform 160ms ease;
+    }
+    
+    .work-item:nth-child(1) {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    }
+    
+    .work-item:nth-child(2) {
+      background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+    }
+    
+    .work-item:nth-child(3) {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
     }
     
     .work-item:hover {
@@ -86,8 +98,8 @@
     .skill-btn:hover,
     .skill-btn:focus {
       transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 14px 36px rgba(124,58,237,0.10);
-      background: linear-gradient(90deg, #f3e8ff 0%, #e6e6fa 100%); /* lavender */
+      box-shadow: 0 14px 36px rgba(14,165,233,0.15);
+      background: linear-gradient(90deg, #ecfeff 0%, #cffafe 100%);
       outline: none;
     }
 
@@ -103,6 +115,7 @@
   </style>
 </head>
 <body>
+  <div class="animated-bg" id="particleCanvas"></div>
   <nav>
     <div class="nav-container">
       <div class="logo">Sourabrata Samanta</div>
@@ -114,21 +127,57 @@
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="blog.html" class="active">Work</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <main style="margin-top:70px;">
-    <section class="work-hero" style="text-align:center;padding:80px 0;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;">
-      <div class="container">
-        <h1 style="font-size:2.5rem;margin-bottom:0.5rem;">Work Experience</h1>
-        <p style="opacity:0.95;margin:0;">Experience focused on cloud-native systems, ML/AI engineering, data platforms and product delivery.</p>
+    <section class="work-hero" style="text-align:center;padding:100px 0 50px;background:linear-gradient(135deg,#0ea5e9 0%,#06b6d4 100%);color:#fff;position:relative;overflow:hidden;">
+      <div style="content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);pointer-events:none;"></div>
+      <div class="container" style="position:relative;z-index:1;">
+        <h1 style="font-size:3.5rem;margin-bottom:1rem;font-weight:800;letter-spacing:-1px;text-shadow:0 2px 20px rgba(0,0,0,0.1);margin-top:-10px;">Work Experience</h1>
+        <p style="opacity:0.95;margin:0;font-size:1.3rem;font-weight:500;letter-spacing:-0.3px;">Experience focused on cloud-native systems, ML/AI engineering, data platforms and product delivery.</p>
       </div>
     </section>
 
     <section class="work-list" style="padding:60px 0;">
       <div class="container" style="max-width:1100px;margin:0 auto;">
+        <!-- auntEDNA -->
+        <article class="work-item work-item--with-skills" style="display:grid;gap:1rem;padding:1.25rem;border-radius:10px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:1rem;">
+          <div class="logo-wrap">
+            <img src="assets/logos/auntedna.png" alt="auntEDNA" class="company-logo">
+          </div>
+          <div>
+            <h3 style="margin:0 0 0.25rem 0;">auntEDNA.ai</h3>
+            <p style="margin:0;font-weight:600;color:#0f172a;">Role: Product Analyst</p>
+            <p style="margin:0.25rem 0;color:#475569;font-size:0.95rem;">Dates: January 2026 - Present</p>
+            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:0.95rem;">
+              At auntEDNA.ai, I drive product strategy and execution for athlete-focused solutions, bridging user needs with technical feasibility to accelerate product-market fit and revenue growth.
+            </p>
+            <ul style="margin:0.75rem 0 0 1.15rem;color:#475569">
+              <li>Accelerated 0-1 product delivery by 30%, measured by time from concept to first release, by scoping a focused MVP that balanced athlete needs, website integrity requirements, and engineering feasibility.</li>
+              <li>Developed an end-to-end go-to-market strategy, defining target segment prioritization, pricing logic, and expansion sequencing, outlining a credible revenue scale path from ~$1M to $100M ARR over 5-7 years.</li>
+              <li>Increased early stage athlete satisfaction by 25%, measured through pilot feedback scores and usage consistency, by prioritizing features grounded in real athlete workflows rather than internal assumptions.</li>
+            </ul>
+          </div>
+          <div class="mphasis-skills" aria-hidden="false">
+            <h4>Skills used</h4>
+            <div class="skill-list">
+              <button class="skill-btn" type="button" onclick="return false;">Product Strategy</button>
+              <button class="skill-btn" type="button" onclick="return false;">Go-to-Market</button>
+              <button class="skill-btn" type="button" onclick="return false;">MVP Development</button>
+              <button class="skill-btn" type="button" onclick="return false;">User Research</button>
+              <button class="skill-btn" type="button" onclick="return false;">Pricing Strategy</button>
+              <button class="skill-btn" type="button" onclick="return false;">Roadmap Planning</button>
+              <button class="skill-btn" type="button" onclick="return false;">Stakeholder Management</button>
+              <button class="skill-btn" type="button" onclick="return false;">Data Analysis</button>
+            </div>
+          </div>
+        </article>
+
         <!-- Mphasis -->
         <article class="work-item work-item--with-skills" style="display:grid;gap:1rem;padding:1.25rem;border-radius:10px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:1rem;">
           <div class="logo-wrap">
@@ -236,6 +285,24 @@
       navMenu.classList.toggle('active');
       toggle.classList.toggle('active');
     }
+
+    function createParticles() {
+      const container = document.getElementById('particleCanvas');
+      const particleCount = 15;
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const size = Math.random() * 60 + 20;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        container.appendChild(particle);
+      }
+    }
+    createParticles();
   </script>
 </body>
 </html>

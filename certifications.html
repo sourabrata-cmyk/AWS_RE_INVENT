@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications & Awards - Sourabrata Samanta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-bg" id="particleCanvas"></div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sourabrata Samanta</div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Work</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html" class="active">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <section class="cert-hero">
+            <div class="container">
+                <h1>Certifications & Awards</h1>
+                <p class="cert-hero-subtitle">Professional credentials validating expertise in AI, Cloud, and Data Engineering</p>
+            </div>
+        </section>
+
+        <section class="cert-content">
+            <div class="container">
+                <div class="cert-grid-page">
+                    <div class="cert-card-large">
+                        <div class="cert-logo">
+                            <img src="assets/logos/aws.png" alt="AWS" style="max-width: 80px; height: auto;">
+                        </div>
+                        <h3>AWS Certified AI Practitioner</h3>
+                        <p class="cert-issuer">Amazon Web Services</p>
+                        <p class="cert-description">Validates foundational knowledge of AI, ML, and generative AI concepts and AWS AI services.</p>
+                        <span class="cert-date">January 2025</span>
+                    </div>
+
+                    <div class="cert-card-large">
+                        <div class="cert-logo">
+                            <img src="assets/logos/aws.png" alt="AWS" style="max-width: 80px; height: auto;">
+                        </div>
+                        <h3>AWS Academy Graduate</h3>
+                        <p class="cert-issuer">AWS Academy Cloud Foundations</p>
+                        <p class="cert-description">Comprehensive training in cloud computing concepts, AWS core services, security, architecture, and pricing.</p>
+                        <span class="cert-date">2025</span>
+                    </div>
+
+                    <div class="cert-card-large">
+                        <div class="cert-logo">
+                            <img src="assets/logos/databricks.png" alt="Databricks" style="max-width: 80px; height: auto;">
+                        </div>
+                        <h3>Generative AI Engineer</h3>
+                        <p class="cert-issuer">Databricks</p>
+                        <p class="cert-description">Expertise in building and deploying generative AI applications using Databricks platform and LLMs.</p>
+                        <span class="cert-date">2025</span>
+                    </div>
+
+                    <div class="cert-card-large">
+                        <div class="cert-badge">🔗</div>
+                        <h3>LangChain & OpenAI</h3>
+                        <p class="cert-issuer">Level up LLM applications development</p>
+                        <p class="cert-description">Advanced training in building production-ready LLM applications using LangChain framework and OpenAI APIs.</p>
+                        <span class="cert-date">2025</span>
+                    </div>
+
+                    <div class="cert-card-large">
+                        <div class="cert-badge">☁️</div>
+                        <h3>Cloud Computing</h3>
+                        <p class="cert-issuer">Introduction to Cloud Computing</p>
+                        <p class="cert-description">Foundational understanding of cloud computing models, services, and deployment strategies.</p>
+                        <span class="cert-date">2020</span>
+                    </div>
+
+                    <div class="cert-card-large">
+                        <div class="cert-badge">🐍</div>
+                        <h3>Python Programming</h3>
+                        <p class="cert-issuer">Python Programming with Data Science</p>
+                        <p class="cert-description">Comprehensive Python programming skills with focus on data science libraries and applications.</p>
+                        <span class="cert-date">2020</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .cert-hero {
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: white;
+            padding: 100px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cert-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cert-content {
+            padding: 80px 0;
+            background: #f0f9ff;
+        }
+
+        .cert-grid-page {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cert-card-large {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 2rem;
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+        }
+
+        .cert-card-large:nth-child(1) {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .cert-card-large:nth-child(2) {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        }
+
+        .cert-card-large:nth-child(3) {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        }
+
+        .cert-card-large:nth-child(4) {
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+        }
+
+        .cert-card-large:nth-child(5) {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        }
+
+        .cert-card-large:nth-child(6) {
+            background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+        }
+
+        .cert-card-large:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(14, 165, 233, 0.15);
+            border-color: #0891b2;
+        }
+
+        .cert-badge {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-logo {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60px;
+        }
+
+        .cert-logo img {
+            object-fit: contain;
+        }
+
+        .cert-card-large h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        .cert-issuer {
+            font-size: 1rem;
+            color: #0891b2;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cert-description {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-date {
+            display: inline-block;
+            background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+            color: #0891b2;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .cert-hero h1 {
+                font-size: 2rem;
+            }
+
+            .cert-hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .cert-grid-page {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        function createParticles() {
+            const container = document.getElementById('particleCanvas');
+            const particleCount = 15;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 60 + 20;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
+</body>
+</html>
