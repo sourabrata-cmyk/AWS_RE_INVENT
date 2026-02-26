@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="animated-bg" id="particleCanvas"></div>
     <nav>
         <div class="nav-container">
             <div class="logo">Sourabrata Samanta</div>
@@ -20,6 +21,8 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="blog.html">Work</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </div>
@@ -106,20 +109,44 @@
 
     <style>
         .contact-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
             color: white;
-            padding: 100px 0;
+            padding: 100px 0 50px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .contact-hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
         }
 
         .contact-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            position: relative;
+            z-index: 1;
         }
 
         .contact-content {
@@ -175,13 +202,29 @@
             min-height: 96px;
         }
 
-        /* hover / focus styles (lavender accent) */
+        .contact-method:nth-child(1) {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .contact-method:nth-child(2) {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        }
+
+        .contact-method:nth-child(3) {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        }
+
+        .contact-method:nth-child(4) {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        }
+
+        /* hover / focus styles (teal accent) */
         .contact-method:hover,
         .contact-method:focus-within {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 18px 40px rgba(124,58,237,0.12);
-            background: linear-gradient(135deg, #f3e8ff 0%, #eef2ff 100%);
-            border-color: rgba(124,58,237,0.12);
+            box-shadow: 0 18px 40px rgba(14,165,233,0.12);
+            background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 100%);
+            border-color: rgba(14,165,233,0.12);
         }
 
         .contact-method a {
@@ -197,7 +240,7 @@
 
         /* keyboard focus visible */
         .contact-method:focus-within {
-            outline: 3px solid rgba(124,58,237,0.14);
+            outline: 3px solid rgba(14,165,233,0.14);
             outline-offset: 4px;
         }
 
@@ -233,6 +276,22 @@
             cursor: default;
         }
 
+        .role-tile:nth-child(1) {
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+        }
+
+        .role-tile:nth-child(2) {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .role-tile:nth-child(3) {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        }
+
+        .role-tile:nth-child(4) {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        }
+
         .role-tile h4 {
             margin: 0;
             font-size: 1.05rem;
@@ -248,14 +307,14 @@
         .role-tile:hover,
         .role-tile:focus {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 18px 40px rgba(124,58,237,0.12);
-            background: linear-gradient(135deg, #f3e8ff 0%, #eef2ff 100%);
-            border-color: rgba(124,58,237,0.12);
+            box-shadow: 0 18px 40px rgba(14,165,233,0.12);
+            background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 100%);
+            border-color: rgba(14,165,233,0.12);
             outline: none;
         }
 
         .role-tile:focus {
-            outline: 3px solid rgba(124,58,237,0.14);
+            outline: 3px solid rgba(14,165,233,0.14);
             outline-offset: 4px;
         }
 
@@ -284,6 +343,24 @@
             navMenu.classList.toggle('active');
             toggle.classList.toggle('active');
         }
+
+        function createParticles() {
+            const container = document.getElementById('particleCanvas');
+            const particleCount = 15;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 60 + 20;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
     </script>
 </body>
 </html>

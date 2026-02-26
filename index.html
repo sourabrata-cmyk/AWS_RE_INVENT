@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="animated-bg" id="particleCanvas"></div>
     <nav>
         <div class="nav-container">
             <div class="logo">Sourabrata Samanta</div>
@@ -21,6 +22,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="blog.html">Work</a></li>
                 <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -42,48 +44,105 @@
         <section class="carousel-section">
             <div class="container">
                 <h2>Gallery</h2>
-                <div class="hobbies-left">
-                    <span class="hobby" style="top: 8%; left: 5%;">🎸 Guitar Player</span>
-                    <span class="hobby" style="top: 8%; left: 55%;">🎸 Lyricist</span>
-                    <span class="hobby" style="top: 20%; left: 5%;">🎸 Spotify Podcaster</span>
-                    <span class="hobby" style="top: 20%; left: 67%;">🎸 Rock Music</span>
-                    <span class="hobby" style="top: 40%; left: 5%;">🎵 Motley Crew</span>
-                    <span class="hobby" style="top: 40%; left: 55%;">🎵 Coldplay</span>
-                    <span class="hobby" style="top: 52%; left: 5%;">🎵 Pink Floyd</span>
-                    <span class="hobby" style="top: 52%; left: 55%;">🎵 Alterbridge</span>
-                    <span class="hobby" style="top: 72%; left: 5%;">✈️ Solo Traveller</span>
-                    <span class="hobby" style="top: 72%; left: 55%;">✈️ Foodie</span>
-                    <span class="hobby" style="top: 84%; left: 30%;">✈️ Travel Enthusiast</span>
-                </div>
-                <div class="hobbies-right">
-                    <span class="hobby" style="top: 8%; right: 5%;">🎮 Fifa</span>
-                    <span class="hobby" style="top: 8%; right: 55%;">🎮 CS-GO</span>
-                    <span class="hobby" style="top: 18%; right: 30%;">🎮 Assassins Creed</span>
-                    <span class="hobby" style="top: 30%; right: 0%;">📷 Travel Vlogger</span>
-                    <span class="hobby" style="top: 30%; right: 50%;">📷 Street Photography</span>
-                    <span class="hobby" style="top: 45%; right: 5%;">🎬 Satyajit Ray</span>
-                    <span class="hobby" style="top: 45%; right: 55%;">🎬 Alfred Hitchcock</span>
-                    <span class="hobby" style="top: 57%; right: 0%;">⚽ India</span>
-                    <span class="hobby" style="top: 57%; right: 40%;">🎬 Christopher Nolan</span>
-                    <span class="hobby" style="top: 72%; right: 5%;">🎬 Marvel </span>
-                    <span class="hobby" style="top: 72%; right: 50%;">⚽ Manchester United</span>
-                    <span class="hobby" style="top: 84%; right: 5%;">⚽ Argentina FC</span>
-                    <span class="hobby" style="top: 84%; right: 55%;">⚽ Mohunbagan</span>
+                <p class="carousel-subtitle">A few things I love outside of work.</p>
+
+                <div class="hobbies-container">
+                    <div class="hobby-card active">
+                        <div class="hobby-card-header">
+                            <span class="hobby-emoji">🎸</span>
+                            <h3>Music &amp; Audio</h3>
+                        </div>
+                        <p>I write, play, and tell stories through sound.</p>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag">Guitar player</span>
+                            <span class="hobby-tag">Lyricist</span>
+                            <span class="hobby-tag">Spotify podcaster</span>
+                            <span class="hobby-tag">Rock music</span>
+                        </div>
+                    </div>
+
+                    <div class="hobby-card active">
+                        <div class="hobby-card-header">
+                            <span class="hobby-emoji">✈️</span>
+                            <h3>Travel &amp; Food</h3>
+                        </div>
+                        <p>Exploring places, people, and plates one trip at a time.</p>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag">Solo traveller</span>
+                            <span class="hobby-tag">Travel vlogger</span>
+                            <span class="hobby-tag">Foodie</span>
+                        </div>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-card-header">
+                            <span class="hobby-emoji">🎮</span>
+                            <h3>Gaming</h3>
+                        </div>
+                        <p>Competitive and story-driven worlds I keep going back to.</p>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag">FIFA</span>
+                            <span class="hobby-tag">CS:GO</span>
+                            <span class="hobby-tag">Assassin's Creed</span>
+                        </div>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-card-header">
+                            <span class="hobby-emoji">🎬</span>
+                            <h3>Cinema &amp; Storytelling</h3>
+                        </div>
+                        <p>From classic directors to universe-building blockbusters.</p>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag">Satyajit Ray</span>
+                            <span class="hobby-tag">Christopher Nolan</span>
+                            <span class="hobby-tag">Marvel</span>
+                        </div>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-card-header">
+                            <span class="hobby-emoji">⚽</span>
+                            <h3>Football</h3>
+                        </div>
+                        <p>Match nights, rivalries, and the beautiful game.</p>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag">Manchester United</span>
+                            <span class="hobby-tag">Argentina</span>
+                            <span class="hobby-tag">Mohun Bagan</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel">
                     <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
                     <div class="carousel-container">
                         <div class="carousel-slide active">
-                            <img src="assets/logos/re.JPG" alt="Slide 1">
+                            <img src="assets/logos/Carousel/re.JPG" alt="Gallery 1">
+                            <img src="assets/logos/Carousel/key.JPG" alt="Gallery 2">
                         </div>
                         <div class="carousel-slide">
-                            <img src="assets/logos/key.JPG" alt="Slide 2">
+                            <img src="assets/logos/Carousel/aws.JPG" alt="Gallery 3">
+                            <img src="assets/logos/Carousel/kiro.jpg" alt="Gallery 4">
                         </div>
                         <div class="carousel-slide">
-                            <img src="assets/logos/aws.JPG" alt="Slide 3">
+                            <img src="assets/logos/Carousel/100_0464.JPG" alt="Gallery 5">
+                            <img src="assets/logos/Carousel/FullSizeRender.jpeg" alt="Gallery 6">
                         </div>
-                           <div class="carousel-slide">
-                            <img src="assets/logos/kiro.JPG" alt="Slide 4">
+                        <div class="carousel-slide">
+                            <img src="assets/logos/Carousel/IMG_1855.jpeg" alt="Gallery 7">
+                            <img src="assets/logos/Carousel/IMG_3773.JPG" alt="Gallery 8">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/logos/Carousel/IMG_5465.jpeg" alt="Gallery 9">
+                            <img src="assets/logos/Carousel/IMG_5577.JPG" alt="Gallery 10">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/logos/Carousel/IMG_5587.JPG" alt="Gallery 11">
+                            <img src="assets/logos/Carousel/IMG_5783.JPG" alt="Gallery 12">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/logos/Carousel/IMG_6643.JPG" alt="Gallery 13">
+                            <img src="assets/logos/Carousel/invent.jpeg" alt="Gallery 14">
                         </div>
                     </div>
                     <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
@@ -93,6 +152,9 @@
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
                 </div>
             </div>
         </section>
@@ -100,62 +162,117 @@
 
     <style>
         .carousel-section {
-            padding: 100px 0;
-            background: #f8fafc;
+            padding: 60px 0;
+            background: #f0f9ff;
             position: relative;
         }
         .carousel-section .container {
             position: relative;
             max-width: 1400px;
         }
-        .hobbies-left, .hobbies-right {
-            position: absolute;
-            width: 250px;
-            height: 500px;
-            pointer-events: none;
-            top: 80px;
-            z-index: 1;
-        }
-        .hobbies-left {
-            left: 20px;
-        }
-        .hobbies-right {
-            right: 20px;
-        }
-        .hobby {
-            position: absolute;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 6px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            white-space: nowrap;
-            animation: float 3s ease-in-out infinite;
-            max-width: 170px;
-        }
-        .hobby:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-        .hobby:nth-child(3) {
-            animation-delay: 1s;
-        }
-        .hobby:nth-child(4) {
-            animation-delay: 1.5s;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
         .carousel-section h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            margin-top: -10px;
             color: #1e293b;
+        }
+        .carousel-subtitle {
+            text-align: center;
+            font-size: 1rem;
+            color: #64748b;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+        }
+        .hobbies-container {
+            display: flex;
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            min-height: 180px;
+            justify-content: center;
+        }
+        .hobby-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            position: relative;
+            overflow: hidden;
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, opacity 1s ease, transform 1s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            flex: 0 0 280px;
+        }
+        .hobby-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hobby-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.15), transparent 55%);
+            opacity: 0;
+            transition: opacity 180ms ease;
+            pointer-events: none;
+        }
+        .hobby-card:hover,
+        .hobby-card:focus-within {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+            border-color: #a5b4fc;
+        }
+        .hobby-card:hover::before,
+        .hobby-card:focus-within::before {
+            opacity: 1;
+        }
+        .hobby-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.65rem;
+        }
+        .hobby-emoji {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: #ffffff;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 14px rgba(14, 165, 233, 0.4);
+        }
+        .hobby-card h3 {
+            font-size: 1.05rem;
+            margin: 0;
+            color: #1f2933;
+        }
+        .hobby-card p {
+            margin: 0 0 0.6rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .hobby-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+        .hobby-tag {
+            font-size: 0.78rem;
+            padding: 0.25rem 0.55rem;
+            border-radius: 999px;
+            background: #ecfeff;
+            color: #0e7490;
+            border: 1px solid rgba(6, 182, 212, 0.6);
+            white-space: nowrap;
         }
         .carousel {
             position: relative;
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
             overflow: hidden;
             border-radius: 10px;
@@ -165,20 +282,25 @@
         .carousel-container {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 450px;
         }
         .carousel-slide {
             display: none;
             width: 100%;
             height: 100%;
+            gap: 1rem;
+            opacity: 0;
+            transition: opacity 1s ease;
         }
         .carousel-slide.active {
-            display: block;
+            display: flex;
+            opacity: 1;
         }
         .carousel-slide img {
-            width: 100%;
+            width: calc(50% - 0.5rem);
             height: 100%;
             object-fit: cover;
+            border-radius: 8px;
         }
         .carousel-btn {
             position: absolute;
@@ -204,7 +326,7 @@
         }
         .carousel-dots {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .dot {
             display: inline-block;
@@ -217,20 +339,37 @@
             transition: background 0.3s;
         }
         .dot.active {
-            background: #2563eb;
+            background: #0891b2;
         }
         @media (max-width: 768px) {
             .carousel-container {
                 height: 250px;
             }
-            .hobbies-left, .hobbies-right {
-                display: none;
+            .carousel-slide {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .carousel-slide img {
+                width: 100%;
+                height: calc(50% - 0.25rem);
+            }
+            .hobbies-container {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 2.5rem;
+            }
+            .hobby-card {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 320px;
             }
         }
     </style>
 
     <script>
         let currentIndex = 0;
+        let hobbyIndex = 0;
+        let autoSlideInterval;
 
         function showSlide(index) {
             const slides = document.querySelectorAll('.carousel-slide');
@@ -249,12 +388,41 @@
         function moveSlide(direction) {
             currentIndex += direction;
             showSlide(currentIndex);
+            resetAutoSlide();
         }
 
         function currentSlide(index) {
             currentIndex = index;
             showSlide(currentIndex);
+            resetAutoSlide();
         }
+
+        function autoSlide() {
+            currentIndex++;
+            showSlide(currentIndex);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoSlide, 3000);
+        }
+
+        function rotateHobbies() {
+            const cards = document.querySelectorAll('.hobby-card');
+            cards.forEach(card => card.classList.remove('active'));
+            
+            const card1 = hobbyIndex % cards.length;
+            const card2 = (hobbyIndex + 1) % cards.length;
+            
+            cards[card1].classList.add('active');
+            cards[card2].classList.add('active');
+            
+            hobbyIndex = (hobbyIndex + 2) % cards.length;
+        }
+
+        // Start auto-rotation
+        autoSlideInterval = setInterval(autoSlide, 3000);
+        setInterval(rotateHobbies, 3000);
 
         function toggleMobileMenu() {
             const navMenu = document.querySelector('.nav-menu');
@@ -262,6 +430,33 @@
             navMenu.classList.toggle('active');
             toggle.classList.toggle('active');
         }
+
+        // Animated background particles
+        function createParticles() {
+            const container = document.getElementById('particleCanvas');
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 60 + 20;
+                const startX = Math.random() * 100;
+                const startY = Math.random() * 100;
+                const delay = Math.random() * 20;
+                
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = startX + '%';
+                particle.style.top = startY + '%';
+                particle.style.animationDelay = delay + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        createParticles();
     </script>
 
     <footer>
